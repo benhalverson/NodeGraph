@@ -22,6 +22,22 @@ class Graph {
     this._nodeCollections = Object.create(null);
     this._edgeCollections = Object.create(null);
   }
+
+  unit(uniqueID) {
+    return this.__lookup[uniqueID];
+  }
+
+  nodeCount() {
+    return this._nodes.length;
+  }
+
+  createNode(entity, properties) {
+    return this._createNode(entity, properties, (this.__uniqval__--).toString(16));
+  }
+
+  _createNode(entity, properties, uniqueID) {
+    return this._addNode(new Node(entity, properties, uniqueID));
+  }
 }
 
 export default Graph;
