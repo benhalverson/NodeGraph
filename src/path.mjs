@@ -1,19 +1,19 @@
 class Path {
-  constructor(array) {
-    this._raw = array.slice();
-  }
+	constructor(array) {
+		this._raw = array.slice();
+	}
 
-  start() {
-    return this._raw[0];
-  }
+	start() {
+		return this._raw[0];
+	}
 
-  end() {
-    return this._raw[this._raw.length - 1];
-  }
+	end() {
+		return this._raw[this._raw.length - 1];
+	}
 
-  length() {
-    // return something....
-  }
+	length() {
+		return this._raw.length >>> 1;
+	}
 }
 
 export default Path;
