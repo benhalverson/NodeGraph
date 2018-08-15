@@ -1,8 +1,9 @@
+debugger;
 import fs from 'fs';
 import zlib from 'zlib';
 
-import Node from './src/node';
-import Edge from './src/edge';
+import Node from './unit/node';
+import Edge from './unit/edge';
 
 import NodeCollection from './collection/node_collection';
 import EdgeCollection from './collection/edge_collection';
@@ -367,4 +368,3 @@ class Graph {
 
 }
 export default Graph;
-// return Graph;
