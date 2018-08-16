@@ -1,10 +1,11 @@
 debugger;
-let ug = require('./src/graph');
-let graph = new ug.Graph();
+import ug, { Graph } from './src/index';
+console.log(ug);
 debugger;
-graph.createNode('person', {name: 'Rachael'});
-graph.createNode('person', {name: 'Stephanie'});
-graph.createNode('person', {name: 'Michael'});
-graph.createNode('person', {name: 'Donovan'});
+Graph.createNode('person', {name: 'Rachael'});
+Graph.createNode('person', {name: 'Stephanie'});
+Graph.createNode('person', {name: 'Michael'});
+Graph.createNode('person', {name: 'Donovan'});
 
-graph.nodes('person').query().filter({name__ilike: 'ae'}).units();
+Graph.nodes('person').query().filter({name__ilike: 'ae'}).units();
+console.log('it works?')
